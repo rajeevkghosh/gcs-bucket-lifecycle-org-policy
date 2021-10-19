@@ -1,0 +1,10 @@
+{
+	"records": [
+		{
+			"key": "tfplan-functions",
+			"source": "./tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/wells-19OCT/gcs-bucket-lifecycle-org-policy/tfplan-functions.sentinel"
+		}
+	]
+}
