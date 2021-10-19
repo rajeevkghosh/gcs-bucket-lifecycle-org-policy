@@ -4,7 +4,7 @@ provider "google" {
  #credentials = file("../key.json")
 }
 
-*resource "google_storage_bucket" "rockstar" {
+resource "google_storage_bucket" "rockstar" {
   name          = "rockstar-bucket"
   location      = "US"
   force_destroy = true
