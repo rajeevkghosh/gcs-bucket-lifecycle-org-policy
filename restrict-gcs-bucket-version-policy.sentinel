@@ -32,10 +32,7 @@ for allBuckets as address, rc {
 			num_versions = plan.evaluate_attribute(rc.change.after.lifecycle_rule[0].condition[0], "num_newer_versions")
 			print(num_versions)
 
-			if num_versions != null {
-
-				#print ("pass")
-			} else {
+			if num_versions is null {
 
 				violations[address] = rc
 			}
