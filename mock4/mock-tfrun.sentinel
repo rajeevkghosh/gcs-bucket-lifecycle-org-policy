@@ -1,0 +1,37 @@
+id = "run-YvCBYYfquEZqU68R"
+created_at = "2021-10-19T11:57:49.714Z"
+message = "Triggered via UI"
+commit_sha = "2836e4d54801f01b1949a88fa0c2c47e0a23e1c6"
+speculative = false
+is_destroy = false
+refresh = true
+refresh_only = false
+replace_addrs = null
+target_addrs = null
+
+variables = {
+	"access_token": {
+		"category":  "terraform",
+		"sensitive": true,
+	},
+}
+
+organization = {
+	"name": "ashwinknaik",
+}
+
+workspace = {
+	"auto_apply":  false,
+	"created_at":  "2021-10-19T08:56:57.336Z",
+	"description": null,
+	"id":          "ws-D31sRDtSYnCns2S7",
+	"name":        "gcs-bucket-lifecycle-org-policy",
+	"tags":        [],
+	"vcs_repo": {
+		"branch":             "",
+		"display_identifier": "rajeevkghosh/gcs-bucket-lifecycle-org-policy",
+		"identifier":         "rajeevkghosh/gcs-bucket-lifecycle-org-policy",
+		"ingress_submodules": false,
+	},
+	"working_directory": "",
+}
