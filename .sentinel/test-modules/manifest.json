@@ -1,0 +1,22 @@
+{
+	"records": [
+		{
+			"key": "test/restrict-gcs-bucket-version-policy/gcs-version-lifecycle-policy-fail/tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/wells-19OCT/gcs-bucket-lifecycle-org-policy/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/restrict-gcs-bucket-version-policy/gcs-version-lifecycle-policy-null/tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/wells-19OCT/gcs-bucket-lifecycle-org-policy/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/restrict-gcs-bucket-version-policy/gcs-version-lifecycle-policy-pass/tfplan-functions",
+			"source": "../../tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/wells-19OCT/gcs-bucket-lifecycle-org-policy/tfplan-functions.sentinel"
+		}
+	]
+}
