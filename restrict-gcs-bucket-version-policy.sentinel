@@ -13,8 +13,6 @@ import "types"
 # Get all Buckets
 allBuckets = plan.find_resources("google_storage_bucket")
 
-allowed_version = 5
-
 # print(allBuckets)
 
 violations = {}
