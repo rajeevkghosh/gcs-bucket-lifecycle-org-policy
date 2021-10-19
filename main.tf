@@ -25,3 +25,22 @@ resource "google_storage_bucket" "rockstar" {
 
 }
 
+
+resource "google_storage_bucket" "hellobucket" {
+  name          = "hello-bucket"
+  location      = "US"
+  force_destroy = true
+  
+  lifecycle_rule {
+    condition {
+      age = 3
+
+    }
+    action {
+      type = "Delete"
+    }
+
+  }
+
+}
+
