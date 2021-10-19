@@ -13,27 +13,23 @@ import "types"
 # Get all Buckets
 allBuckets = plan.find_resources("google_storage_bucket")
 
-# print(allBuckets)
-
 violations = {}
 for allBuckets as address, rc {
 	versioning = rc["change"]["after"]["versioning"][0]
-	print(versioning)
+
 	is_undefined = rule { types.type_of(versioning) is "undefined" }
-	print(is_undefined)
 
 	if not is_undefined {
 
 		versioning = plan.evaluate_attribute(rc.change.after.versioning[0], "enabled")
 
 		if versioning is true {
-			print("hidddd")
 
 			num_versions = plan.evaluate_attribute(rc.change.after.lifecycle_rule[0].condition[0], "num_newer_versions")
-			print(num_versions)
 
 			if num_versions is null {
 
+				print(" num_newer_versions can't have null value if versioning is enabled ")
 				violations[address] = rc
 			}
 
