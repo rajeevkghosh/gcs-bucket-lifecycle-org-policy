@@ -4,7 +4,7 @@ provider "google" {
  #credentials = file("../key.json")
 }
 
-/*resource "google_storage_bucket" "rockstar" {
+*resource "google_storage_bucket" "rockstar" {
   name          = "rockstar-bucket"
   location      = "US"
   force_destroy = true
@@ -15,7 +15,7 @@ provider "google" {
   lifecycle_rule {
     condition {
       age = 3
-      num_newer_versions = 5
+     
     }
     action {
       type = "Delete"
@@ -23,7 +23,7 @@ provider "google" {
 
   }
 
-}*/
+}
 
 
 resource "google_storage_bucket" "hellobucket" {
