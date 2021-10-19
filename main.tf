@@ -1,7 +1,7 @@
 provider "google" {
- #access_token = var.access_token
+ access_token = var.access_token
  project = "tokyo-nomad-323506"
- credentials = file("../key.json")
+ #credentials = file("../key.json")
 }
 
 resource "google_storage_bucket" "rockstar" {
