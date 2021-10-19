@@ -1,0 +1,284 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"google_storage_bucket": {
+				"rockstar": {
+					0: {
+						"applied": {
+							"cors": [],
+							"default_event_based_hold": null,
+							"encryption":               [],
+							"force_destroy":            true,
+							"labels":                   null,
+							"lifecycle_rule": [
+								{
+									"action": [
+										{
+											"storage_class": "",
+											"type":          "Delete",
+										},
+									],
+									"condition": [
+										{
+											"age":                        3,
+											"created_before":             "",
+											"custom_time_before":         "",
+											"days_since_custom_time":     null,
+											"days_since_noncurrent_time": null,
+											"matches_storage_class":      [],
+											"noncurrent_time_before":     "",
+											"num_newer_versions":         5,
+										},
+									],
+								},
+							],
+							"location":         "US",
+							"logging":          [],
+							"name":             "rockstar-bucket",
+							"requester_pays":   null,
+							"retention_policy": [],
+							"storage_class":    "STANDARD",
+							"versioning": [
+								{
+									"enabled": true,
+								},
+							],
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket_policy_only": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"default_event_based_hold": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"encryption.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"labels": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"lifecycle_rule.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"lifecycle_rule.0.action.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"lifecycle_rule.0.action.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"lifecycle_rule.0.action.0.storage_class": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.action.0.type": {
+								"computed": false,
+								"new":      "Delete",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.age": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.created_before": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.custom_time_before": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.days_since_custom_time": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.days_since_noncurrent_time": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.matches_storage_class.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.noncurrent_time_before": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.num_newer_versions": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"lifecycle_rule.0.condition.0.with_state": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"location": {
+								"computed": false,
+								"new":      "US",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "rockstar-bucket",
+								"old":      "",
+							},
+							"project": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"requester_pays": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"retention_policy.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"self_link": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_class": {
+								"computed": false,
+								"new":      "STANDARD",
+								"old":      "",
+							},
+							"uniform_bucket_level_access": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"url": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"versioning.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"versioning.0.enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "1.0.9"
+
+variables = {
+	"access_token": "REDACTED_SENSITIVE",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources
