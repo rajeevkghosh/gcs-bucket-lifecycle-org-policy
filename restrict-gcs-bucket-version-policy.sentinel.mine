@@ -15,20 +15,29 @@ allBuckets = plan.find_resources("google_storage_bucket")
 
 violations = {}
 for allBuckets as address, rc {
-    versioning = plan.evaluate_attribute(rc, "versioning.0.enabled")
-    is_null = rule { types.type_of(versioning) is "null" }
-    if not is_null {
-        if versioning {
-            num_versions = plan.evaluate_attribute(rc , "lifecycle_rule.0.condition.0.num_newer_versions")
-            if num_versions is null {
-                message = "num_newer_versions can't have null value if versioning is enabled "
-                violations[address] = message
-            }
-        }
-    } 
-}
+	versioning = rc["change"]["after"]["versioning"][0]
 
-print(violations)
+	is_undefined = rule { types.type_of(versioning) is "undefined" }
+
+	if not is_undefined {
+
+		versioning = plan.evaluate_attribute(rc.change.after.versioning[0], "enabled")
+
+		if versioning is true {
+
+			num_versions = plan.evaluate_attribute(rc.change.after.lifecycle_rule[0].condition[0], "num_newer_versions")
+
+			if num_versions is null {
+
+				print(" num_newer_versions can't have null value if versioning is enabled ")
+				violations[address] = rc
+			}
+
+		}
+
+	}
+
+}
 
 # print(violations)
 
