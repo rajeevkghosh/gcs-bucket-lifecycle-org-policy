@@ -1,7 +1,12 @@
 provider "google" {
  access_token = var.access_token
- project = "tokyo-nomad-323506"
+ project = "airline1-sabre-wolverine"
  #credentials = file("../key.json")
+}
+
+data "google_project_organization_policy" "policy" {
+  project    = "airline1-sabre-wolverine"
+  constraint = "constraints/storage.publicAccessPrevention"
 }
 
 resource "google_storage_bucket" "rockstar" {
@@ -27,7 +32,7 @@ resource "google_storage_bucket" "rockstar" {
 
 
 resource "google_storage_bucket" "hellobucket" {
-  name          = "hello-bucket"
+  name          = "hello-bucket-air"
   location      = "US"
   force_destroy = true
   
